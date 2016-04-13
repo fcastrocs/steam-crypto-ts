@@ -1,10 +1,12 @@
 # node-steam-crypto
 
-Node.js implementation of Steam crypto. All keys and data are passed as Buffers.
+Node.js implementation of Steam crypto. All keys, data, and signatures are passed as Buffers.
+
+Fork of, and compatible with, [steam-crypto](https://www.npmjs.com/package/steam-crypto).
 
 ## verifySignature(data, signature[, algorithm])
 
-Verifies an RSA signature using the Steam system's public key. `data` and `signature` should both be Buffers. `algorithm` defaults to "RSA-SHA1". Returns `true` if the signature is valid, or `false` if not.
+Verifies an RSA signature using the Steam system's public key. `algorithm` defaults to "RSA-SHA1". Returns `true` if the signature is valid, or `false` if not.
 
 ## generateSessionKey()
 

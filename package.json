@@ -1,15 +1,25 @@
 {
-  "name": "steam-crypto",
-  "version": "0.0.1",
-  "description": "Node.js implementation of Valve's crypto",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/seishun/node-steam-crypto.git"
-  },
-  "keywords": [
-    "steam",
-    "crypto"
-  ],
-  "author": "Nikolai Vavilov <vvnicholas@gmail.com>",
-  "license": "MIT"
+	"name": "@doctormckay/steam-crypto",
+	"version": "1.0.0",
+	"description": "Node.js implementation of Valve's crypto",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DoctorMcKay/node-steam-crypto.git"
+	},
+	"keywords": [
+		"steam",
+		"crypto"
+	],
+	"author": {
+		"name": "Alexander Corn",
+		"email": "mckay@doctormckay.com",
+		"url": "https://www.doctormckay.com"
+	},
+	"contributors": [
+		{
+			"name": "Nikolai Vavilov",
+			"email": "vvnicholas@gmail.com"
+		}
+	],
+	"license": "MIT"
 }
