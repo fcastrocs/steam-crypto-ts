@@ -94,3 +94,15 @@ exports.symmetricDecrypt = function(input, key, checkHmac) {
 
 	return plaintext;
 };
+
+/**
+ * Decrypt something that was encrypted with AES/ECB/PKCS7
+ * @param {Buffer} input
+ * @param {Buffer} key
+ * @returns {Buffer}
+ */
+exports.symmetricDecryptECB = function(input, key) {
+	var decipher = Crypto.createDecipheriv('aes-256-ecb', key, '');
+	decipher.end(input);
+	return decipher.read();
+};
