@@ -1,30 +1,69 @@
 {
-  "name": "@doctormckay/steam-crypto-ts",
+  "name": "steam-crypto-ts",
   "version": "1.2.0",
   "description": "Node.js implementation of Valve's crypto",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DoctorMcKay/node-steam-crypto.git"
+    "url": "git+https://github.com/fcastrocs/steam-crypto-ts.git"
   },
   "keywords": [
     "steam",
     "crypto"
   ],
-  "author": {
-    "name": "Alexander Corn",
-    "email": "mckay@doctormckay.com",
-    "url": "https://www.doctormckay.com"
-  },
+  "author": "Alexander Corn <mckay@doctormckay.com> (https://www.doctormckay.com)",
   "contributors": [
-    {
-      "name": "Nikolai Vavilov",
-      "email": "vvnicholas@gmail.com"
-    }
+    "Nikolai Vavilov <vvnicholas@gmail.com>"
   ],
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.14.31",
     "tslint": "^6.1.3",
     "typescript": "^4.1.5"
+  },
+  "bugs": {
+    "url": "https://github.com/fcastrocs/steam-crypto-ts"
+  },
+  "homepage": "https://github.com/fcastrocs/steam-crypto-ts",
+  "main": "dist/index.js",
+  "dependencies": {
+    "balanced-match": "^1.0.0",
+    "argparse": "^1.0.10",
+    "ansi-styles": "^3.2.1",
+    "color-convert": "^1.9.3",
+    "color-name": "^1.1.3",
+    "brace-expansion": "^1.1.11",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.3",
+    "builtin-modules": "^1.1.1",
+    "concat-map": "^0.0.1",
+    "diff": "^4.0.2",
+    "escape-string-regexp": "^1.0.5",
+    "esprima": "^4.0.1",
+    "fs.realpath": "^1.0.0",
+    "glob": "^7.1.6",
+    "function-bind": "^1.1.1",
+    "has": "^1.0.3",
+    "inflight": "^1.0.6",
+    "has-flag": "^3.0.0",
+    "inherits": "^2.0.4",
+    "js-tokens": "^4.0.0",
+    "is-core-module": "^2.2.0",
+    "js-yaml": "^3.14.1",
+    "minimist": "^1.2.5",
+    "minimatch": "^3.0.4",
+    "mkdirp": "^0.5.5",
+    "once": "^1.4.0",
+    "path-is-absolute": "^1.0.1",
+    "path-parse": "^1.0.6",
+    "sprintf-js": "^1.0.3",
+    "semver": "^5.7.1",
+    "resolve": "^1.20.0",
+    "tslib": "^1.14.1",
+    "tsutils": "^2.29.0",
+    "supports-color": "^5.5.0",
+    "wrappy": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
