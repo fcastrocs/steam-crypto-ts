@@ -1,6 +1,6 @@
 {
   "name": "steam-crypto-ts",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Node.js implementation of Valve's crypto",
   "repository": {
     "type": "git",

@@ -33,7 +33,7 @@ export function generateSessionKey(nonce: Buffer) {
  * AES-encrypt some data with a symmetric key.
  * If iv is not provided, one will be generated randomly
  */
-export function symmetricEncrypt(input: Buffer, key: Buffer, iv?: Buffer): Buffer {
+export function symmetricEncrypt(input: Crypto.BinaryLike, key: Buffer, iv?: Buffer): Buffer {
     iv = iv || Crypto.randomBytes(16);
     var aesIv = Crypto.createCipheriv('aes-256-ecb', key, '');
     aesIv.setAutoPadding(false);
@@ -50,7 +50,7 @@ export function symmetricEncrypt(input: Buffer, key: Buffer, iv?: Buffer): Buffe
  * @param {Buffer} input
  * @param {Buffer} key
  */
-export function symmetricEncryptWithHmacIv(input: Buffer, key: Buffer): Buffer {
+export function symmetricEncryptWithHmacIv(input: Crypto.BinaryLike, key: Buffer): Buffer {
     // IV is HMAC-SHA1(Random(3) + Plaintext) + Random(3). (Same random values for both)
     var random = Crypto.randomBytes(3);
     var hmac = Crypto.createHmac("sha1", key.slice(0, 16)); // we only want the first 16 bytes of the key for the hmac
