@@ -18,12 +18,11 @@ export function verifySignature(data: Buffer, signature: Buffer, algorithm: stri
 
 /**
  * Generate a 32-byte symmetric session key and encrypt it with Steam's public "System" key.
- * @param {Buffer} [nonce] - If provided, will be appended to the session key when encrypting
- * @returns {{plain: Buffer, encrypted: Buffer}}
+ * @param nonce - If provided, will be appended to the session key when encrypting
  */
-export function generateSessionKey(nonce: Uint8Array) {
-    var sessionKey = Crypto.randomBytes(32);
-    var cryptedSessionKey = Crypto.publicEncrypt(g_PubkeySystem, Buffer.concat([sessionKey, nonce || Buffer.alloc(0)]));
+export function generateSessionKey(nonce: Buffer) {
+    let sessionKey = Crypto.randomBytes(32);
+    let cryptedSessionKey = Crypto.publicEncrypt(g_PubkeySystem, Buffer.concat([sessionKey, nonce || Buffer.alloc(0)]));
     return {
         plain: sessionKey,
         encrypted: cryptedSessionKey
