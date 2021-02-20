@@ -1,7 +1,6 @@
-
 import Crypto from "crypto";
 import fs from "fs";
-import path from "path"
+import path from "path";
 const g_PubkeySystem = fs.readFileSync(path.join(__dirname, "../system.pem"));
 
 namespace SteamCrypto {
