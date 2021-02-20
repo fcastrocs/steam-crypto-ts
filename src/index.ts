@@ -1,7 +1,7 @@
 
 import Crypto from "crypto";
 import fs from "fs";
-const g_PubkeySystem = fs.readFileSync(__dirname + '../system.pem');
+const g_PubkeySystem = fs.readFileSync('../system.pem');
 
 /**
  * Verifies a signature using the Steam "System" public key.
