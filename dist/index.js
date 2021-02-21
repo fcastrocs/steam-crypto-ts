@@ -96,5 +96,22 @@ var SteamCrypto;
     }
     SteamCrypto.symmetricDecryptECB = symmetricDecryptECB;
     ;
+    /**
+     * Hash input with sha1 algorithm
+     */
+    function sha1(input) {
+        let buffer;
+        // convert to buffer
+        if (!Buffer.isBuffer(input)) {
+            buffer = Buffer.from(input, 'utf8');
+        }
+        else {
+            buffer = input;
+        }
+        let hash = crypto_1.default.createHash("sha1");
+        hash.update(buffer);
+        return hash.digest("hex");
+    }
+    SteamCrypto.sha1 = sha1;
 })(SteamCrypto || (SteamCrypto = {}));
 exports.default = SteamCrypto;

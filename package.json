@@ -1,6 +1,6 @@
 {
   "name": "steam-crypto-ts",
-  "version": "1.0.0",
+  "version": "3.0.1",
   "description": "Typescript port of [node-steam-crypto](https://github.com/DoctorMcKay/node-steam-crypto).",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

@@ -91,7 +91,26 @@ namespace SteamCrypto {
         decipher.end(input);
         return decipher.read();
     };
+
+    /**
+     * Hash input with sha1 algorithm
+     */
+    export function sha1(input: string | Buffer) {
+		let buffer: Buffer;
+
+		// convert to buffer
+		if (!Buffer.isBuffer(input)) {
+			buffer = Buffer.from(input, 'utf8');
+		} else {
+			buffer = input;
+		}
+
+		let hash = Crypto.createHash("sha1");
+		hash.update(buffer);
+		return hash.digest("hex");
+	}
 }
+
 export default SteamCrypto;
 
 
